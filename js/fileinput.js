@@ -1,6 +1,6 @@
 /*!
- * bootstrap-fileinput v4.5.2
- * http://plugins.krajee.com/file-input
+ * https://github.com/choelea/bootstrap-fileinput forked from "bootstrap-fileinput v4.5.2
+ * http://plugins.krajee.com/file-input"
  *
  * Author: Kartik Visweswaran
  * Copyright: 2014 - 2018, Kartik Visweswaran, Krajee.com
@@ -3634,9 +3634,9 @@
             self.reader = null;
             self._resetUpload();
             self._hideFileIcon();
-            if (self.dropZoneEnabled) {
-                self.$container.find('.file-drop-zone .' + self.dropZoneTitleClass).remove();
-            }
+            // if (self.dropZoneEnabled) {
+            //     self.$container.find('.file-drop-zone .' + self.dropZoneTitleClass).remove();
+            // }
             if (isAjaxUpload) {
                 $.each(files, function (vKey, vFile) {
                     self._filterDuplicate(vFile, tfiles, fileIds);
