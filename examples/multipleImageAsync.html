@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Krajee JQuery Plugins - &copy; Kartik</title>
-    
+
     <link rel="stylesheet" href="css/bootstrap-3.3.7.css" crossorigin="anonymous">
     <link href="../css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
@@ -16,6 +16,28 @@
     <script src="../js/fileinput.js" type="text/javascript"></script>
     <script src="../themes/fas/theme.js" type="text/javascript"></script>
     <script src="../themes/explorer-fas/theme.js" type="text/javascript"></script>
+    <style>
+        .file-drop-zone-title {
+            float: left;
+            border: 1px solid #e5e5e5;
+            border: 1px solid rgba(0,0,0,0.2);
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+            margin:8px;
+        }
+
+        .file-drop-zone .file-preview-thumbnails {
+            float: left;
+        }
+        
+        .file-preview {
+            width:auto;
+            display: inline-block;
+        }
+
+        .file-input {
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 <div class="container my-4">
@@ -33,11 +55,11 @@
         <button type="submit" class="btn btn-primary">Submit</button>
         <button type="reset" class="btn btn-outline-secondary">Reset</button>
     </form>
-    
+
 </div>
 </body>
 <script>
-    
+
     $(document).ready(function () {
         $imag = $("#multipleImages");
         $imag.fileinput({
