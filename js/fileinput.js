@@ -3099,10 +3099,15 @@
         },
         _getFileCount: function (fileCount) {
             var self = this, addCount = 0;
-            if (self.validateInitialCount && !self.overwriteInitial) {
-                addCount = self.previewCache.count();
-                fileCount += addCount;
+            if(self.showPreview){
+                fileCount = self.$preview.find('.kv-preview-thumb').length;
+            } else {
+                if (self.validateInitialCount && !self.overwriteInitial) {
+                    addCount = self.previewCache.count();
+                    fileCount += addCount;
+                }
             }
+            
             return fileCount;
         },
         _getFileId: function (file) {
@@ -3659,6 +3664,7 @@
             self._resetErrors();
             len = tfiles.length;
             total = self._getFileCount(isAjaxUpload ? (self.getFileStack().length + len) : len);
+            total = self.showPreview ? total+1 : total;
             if (maxCount > 0 && total > maxCount) {
                 if (!self.autoReplace || len > maxCount) {
                     maxCountCheck((self.autoReplace && len > maxCount ? len : total), maxCount);
