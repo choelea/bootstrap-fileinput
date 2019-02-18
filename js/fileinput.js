@@ -3075,7 +3075,8 @@
                 return;
             }
             if ($zone.find($h.FRAMES).length === 0 && $h.isEmpty(self.defaultPreviewContent)) {
-                $zone.prepend('<div class="' + self.dropZoneTitleClass + '">' + title + '</div>');
+                // $zone.prepend('<div class="' + self.dropZoneTitleClass + '">' + title + '</div>');
+                self.$preview.after('<div class="' + self.dropZoneTitleClass + '">' + title + '</div>');
             }
             self.$container.removeClass('file-input-new');
             $h.addCss(self.$container, 'file-input-ajax-new');
