@@ -23,8 +23,11 @@
             border: 1px solid rgba(0,0,0,0.2);
             box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
             margin:8px;
+            width: 213px;
+            height: 250px;
+            font-size: 50px;
+            padding: 97px 10px;
         }
-
         .file-drop-zone .file-preview-thumbnails {
             float: left;
         }
@@ -64,7 +67,9 @@
         $imag = $("#multipleImages");
         $imag.fileinput({
             uploadUrl: "http://localhost:3000/uploadone",
-            maxFileCount: 2,
+            dropZoneTitle:"",
+            "dropZoneClickTitle": "<i class='glyphicon glyphicon-plus'></i>",
+            maxFileCount: 6,
             showBrowse: false,
             showCaption: false,
             showRemove: false,
