@@ -17,29 +17,7 @@
     <script src="../themes/fas/theme.js" type="text/javascript"></script>
     <script src="../themes/explorer-fas/theme.js" type="text/javascript"></script>
     <style>
-        .file-drop-zone-title {
-            float: left;
-            border: 1px solid #e5e5e5;
-            border: 1px solid rgba(0,0,0,0.2);
-            box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-            margin:8px;
-            width: 213px;
-            height: 250px;
-            font-size: 50px;
-            padding: 97px 10px;
-        }
-        .file-drop-zone .file-preview-thumbnails {
-            float: left;
-        }
         
-        .file-preview {
-            width:auto;
-            display: inline-block;
-        }
-
-        .file-input {
-            display: inline-block;
-        }
     </style>
 </head>
 <body>
@@ -66,9 +44,8 @@
     $(document).ready(function () {
         $imag = $("#multipleImages");
         $imag.fileinput({
-            uploadUrl: "http://localhost:3000/uploadone",
-            dropZoneTitle:"",
-            "dropZoneClickTitle": "<i class='glyphicon glyphicon-plus'></i>",
+            uploadUrl: "http://localhost:3000/uploadone",            
+            "dropZoneClickTitle": "点击添加",
             maxFileCount: 6,
             showBrowse: false,
             showCaption: false,

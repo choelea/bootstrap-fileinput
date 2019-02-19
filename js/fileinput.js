@@ -3069,7 +3069,7 @@
             var self = this, $zone = self.$container.find('.file-drop-zone'), title = self.dropZoneTitle, strFiles;
             if (self.isClickable) {
                 strFiles = $h.isEmpty(self.$element.attr('multiple')) ? self.fileSingle : self.filePlural;
-                title += self.dropZoneClickTitle.replace('{files}', strFiles);
+                title = self.dropZoneClickTitle.replace('{files}', strFiles);
             }
             $zone.find('.' + self.dropZoneTitleClass).remove();
             if (!self.showPreview || $zone.length === 0 || self.getFileStack().length > 0 || !self.dropZoneEnabled ||
@@ -3078,7 +3078,7 @@
             }
             if ($zone.find($h.FRAMES).length === 0 && $h.isEmpty(self.defaultPreviewContent)) {
                 // $zone.prepend('<div class="' + self.dropZoneTitleClass + '">' + title + '</div>');
-                self.$preview.after('<div class="' + self.dropZoneTitleClass + '">' + title + '</div>');
+                self.$preview.after('<div class="' + self.dropZoneTitleClass + '"><div><i class="glyphicon glyphicon-plus"></i></div>' + title + '</div>');
             }
             self.$container.removeClass('file-input-new');
             $h.addCss(self.$container, 'file-input-ajax-new');
@@ -4504,7 +4504,7 @@
             uploadBatch: 'batch file upload',
             uploadExtra: 'form data upload'
         },
-        dropZoneTitle: 'Drag & drop files here &hellip;',
+        dropZoneTitle: 'Drag & drop files here &hellip;', // Don't use it
         dropZoneClickTitle: '<br>(or click to select {files})',
         previewZoomButtonTitles: {
             prev: 'View previous file',

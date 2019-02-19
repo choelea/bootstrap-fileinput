@@ -397,10 +397,19 @@
 }
 
 .file-drop-zone-title {
-    color: #aaa;
-    font-size: 1.6em;
-    padding: 85px 10px;
+    color: #aaa;    
     cursor: default;
+    font-size: 1.6em;
+    float: left;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    margin:8px;
+    width: 213px;
+    height: 250px;
+    padding: 97px 10px;
+}
+.file-drop-zone-title .glyphicon-plus{
+    font-size: 1.6em;
 }
 
 .file-highlighted {
