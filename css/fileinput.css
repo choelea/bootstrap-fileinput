@@ -57,7 +57,7 @@
 }
 
 .krajee-default .file-thumb-progress .progress, .krajee-default .file-thumb-progress .progress-bar {
-    height: 15px;
+    height: 16px;
     font-family: Verdana, Helvetica, sans-serif;
     font-size: 9px;
 }
@@ -254,7 +254,7 @@
 .krajee-default .file-footer-caption {
     display: block;
     text-align: center;
-    padding-top: 4px;
+    padding-top: 2px;
     font-size: 11px;
     color: #777;
     margin-bottom: 15px;
@@ -267,7 +267,7 @@
 
 .krajee-default .file-thumb-progress {
     height: 11px;
-    top: 37px;
+    top: 30px;
     left: 0;
     right: 0;
 }
