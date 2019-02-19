@@ -3076,10 +3076,7 @@
                 (!self.isAjaxUpload && self.$element.files)) {
                 return;
             }
-            if ($zone.find($h.FRAMES).length === 0 && $h.isEmpty(self.defaultPreviewContent)) {
-                // $zone.prepend('<div class="' + self.dropZoneTitleClass + '">' + title + '</div>');
-                self.$preview.after('<div class="' + self.dropZoneTitleClass + '"><div><i class="glyphicon glyphicon-plus"></i></div>' + title + '</div>');
-            }
+            self.$preview.after('<div class="' + self.dropZoneTitleClass + '"><div><i class="glyphicon glyphicon-plus"></i></div>' + title + '</div>');
             self.$container.removeClass('file-input-new');
             $h.addCss(self.$container, 'file-input-ajax-new');
         },
