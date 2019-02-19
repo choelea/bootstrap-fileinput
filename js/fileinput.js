@@ -2932,7 +2932,9 @@
         },
         _addToPreview: function ($preview, content) {
             var self = this;
-            return self.reversePreviewOrder ? $preview.prepend(content) : $preview.append(content);
+            var $dropZoneTitle = self.$dropZone.find('.' + self.dropZoneTitleClass);
+            self.reversePreviewOrder ? $preview.prepend(content) : $preview.append(content);
+            return $dropZoneTitle.appendTo($preview);
         },
         _previewDefault: function (file, previewId, isDisabled) {
             var self = this, $preview = self.$preview;
@@ -3357,22 +3359,24 @@
                 return;
             }
             $zone = self.$dropZone;
-            if (!self.isAjaxUpload) {
-                $tmpZone = self.$preview.find('.file-default-preview');
-                if ($tmpZone.length) {
-                    $zone = $tmpZone;
-                }
-            }
+            // if (!self.isAjaxUpload) {
+            //     $tmpZone = self.$preview.find('.file-default-preview');
+            //     if ($tmpZone.length) {
+            //         $zone = $tmpZone;
+            //     }
+            // }
+            var $clickBrowserZone = self.$dropZone.find('.' + self.dropZoneTitleClass);
 
-            $h.addCss($zone, 'clickable');
-            $zone.attr('tabindex', -1);
-            self._handler($zone, 'click', function (e) {
-                var $tar = $(e.target);
-                if (!$(self.elErrorContainer + ':visible').length &&
-                    (!$tar.parents('.file-preview-thumbnails').length || $tar.parents('.file-default-preview').length)) {
-                    self.$element.data('zoneClicked', true).trigger('click');
-                    $zone.blur();
-                }
+            $h.addCss($clickBrowserZone, 'clickable');
+            // $zone.attr('tabindex', -1);
+            self._handler($clickBrowserZone, 'click', function (e) {
+                self.$element.data('zoneClicked', true).trigger('click');
+                // var $tar = $(e.target);
+                // if (!$(self.elErrorContainer + ':visible').length &&
+                //     (!$tar.parents('.file-preview-thumbnails').length || $tar.parents('.file-default-preview').length)) {
+                //     self.$element.data('zoneClicked', true).trigger('click');
+                //     $clickBrowserZone.blur();
+                // }
             });
         },
         _initCaption: function () {
