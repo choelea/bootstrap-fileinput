@@ -3101,7 +3101,7 @@
         _getFileCount: function (fileCount) {
             var self = this, addCount = 0;
             if(self.showPreview){
-                fileCount = self.$preview.find('.kv-preview-thumb').length;
+                fileCount = self.getFrames().length;
             } else {
                 if (self.validateInitialCount && !self.overwriteInitial) {
                     addCount = self.previewCache.count();
