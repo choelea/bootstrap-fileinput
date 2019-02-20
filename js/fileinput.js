@@ -3100,7 +3100,7 @@
         _getFileCount: function (fileCount) {
             var self = this, addCount = 0;
             if(self.showPreview){
-                fileCount = self.getFrames().length;
+                fileCount = self.getFrames().length + fileCount;
             } else {
                 if (self.validateInitialCount && !self.overwriteInitial) {
                     addCount = self.previewCache.count();
@@ -3666,7 +3666,6 @@
             self._resetErrors();
             len = tfiles.length;
             total = self._getFileCount(isAjaxUpload ? (self.getFileStack().length + len) : len);
-            total = self.showPreview ? total+1 : total;
             if (maxCount > 0 && total > maxCount) {
                 if (!self.autoReplace || len > maxCount) {
                     maxCountCheck((self.autoReplace && len > maxCount ? len : total), maxCount);
@@ -4136,6 +4135,7 @@
             self.clearStack();
             self.formdata = {};
             self._setFileDropZoneTitle();
+            self._initClickable();
             return self.$element;
         },
         disable: function () {
