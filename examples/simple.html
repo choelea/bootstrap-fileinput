@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- release v4.5.2, copyright 2014 - 2018 Kartik Visweswaran -->
+<!--suppress JSUnresolvedLibraryURL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Krajee JQuery Plugins - &copy; Kartik</title>
+
+    <link rel="stylesheet" href="css/bootstrap-3.3.7.css" crossorigin="anonymous">
+    <link href="../css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
+    <link href="../themes/explorer-fas/theme.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="https://wcdn.okchem.com/resources/common/js/jquery.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap-3.3.7.js" crossorigin="anonymous"></script>
+    <script src="../js/plugins/sortable.js" type="text/javascript"></script>
+    <script src="../js/fileinput.js" type="text/javascript"></script>
+    <script src="../themes/fas/theme.js" type="text/javascript"></script>
+    <script src="../themes/explorer-fas/theme.js" type="text/javascript"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+<div class="container my-4">
+    <h1>Bootstrap File Input Examples</h1>
+    <hr>
+    <form enctype="multipart/form-data">
+        <br>
+        <div class="file-loading">
+            <input id="input-700" name="kartik-input-700[]" type="file" multiple>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-outline-secondary">Reset</button>
+    </form>
+
+</div>
+</body>
+<script>
+$(document).on("ready", function() {
+    $("#input-700").fileinput({
+        uploadUrl: "/file-upload-single/1",
+        maxFileCount: 5,
+        browseOnZoneClick: true
+    });
+    console.log($("#input-700").data('fileinput'));
+});
+</script>
+</html>
