@@ -200,10 +200,9 @@
 }
 
 .krajee-default.file-preview-frame {
-    margin: 3px;
-    border: 1px solid rgba(0,0,0,0.2);
-    /* box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); */
-    padding: 6px;
+    margin: 2px;
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 3px;
     float: left;
     text-align: center;
 }
@@ -399,16 +398,15 @@
 }
 
 .file-drop-zone-title {
-    margin: 3px;
-    border: 1px solid rgba(0,0,0,0.2);
-    /* box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); */
-    font-size: 1.6em;
+    margin: 2px;
+    border: 1px solid rgba(0,0,0,.2);
+    font-size: 1.4em;
     color: #646c9a;
     float: left;
     text-align: center;
-    width: 184px;
-    height: 240px;
-    padding: 90px 10px;
+    width: 172px;
+    height: 234px;
+    padding: 86px 10px;
 }
 .file-drop-zone-title .glyphicon-plus{
     font-size: 1.6em;
