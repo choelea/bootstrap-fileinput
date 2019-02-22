@@ -723,7 +723,6 @@
             tFooter = '<div class="file-thumbnail-footer">\n' +
                 '    <div class="file-footer-caption" title="{caption}">\n' +
                 '        <div class="file-caption-info">{caption}</div>\n' +
-                '        <div class="file-size-info">{size}</div>\n' +
                 '    </div>\n' +
                 '    {progress}\n{indicator}\n{actions}\n' +
                 '</div>';

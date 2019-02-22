@@ -10,7 +10,7 @@
  * Licensed under the BSD 3-Clause
  * https://github.com/kartik-v/bootstrap-fileinput/blob/master/LICENSE.md
  */
-.file-loading input[type=file], input[type=file].file-loading {
+ .file-loading input[type=file], input[type=file].file-loading {
     width: 0;
     height: 0;
 }
@@ -55,9 +55,13 @@
     width: 16px;
     height: 16px;
 }
-
-.krajee-default .file-thumb-progress .progress, .krajee-default .file-thumb-progress .progress-bar {
+.krajee-default .file-drag-handle, .krajee-default .file-actions {
+    float: right;
+    margin: 5px 0 -5px;
     height: 16px;
+}
+.krajee-default .file-thumb-progress .progress, .krajee-default .file-thumb-progress .progress-bar {
+    /* height: 16px; */
     font-family: Verdana, Helvetica, sans-serif;
     font-size: 9px;
 }
@@ -196,16 +200,16 @@
 }
 
 .krajee-default.file-preview-frame {
-    margin: 8px;
+    margin: 3px;
     border: 1px solid rgba(0,0,0,0.2);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    /* box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); */
     padding: 6px;
     float: left;
     text-align: center;
 }
 
 .krajee-default.file-preview-frame .kv-file-content {
-    width: 213px;
+    width: 164px;
     height: 160px;
 }
 
@@ -219,13 +223,13 @@
 }
 
 .krajee-default.file-preview-frame .file-thumbnail-footer {
-    height: 70px;
+    height: 66px;
 }
-
+/*
 .krajee-default.file-preview-frame:not(.file-preview-error):hover {
     border: 1px solid rgba(0,0,0,0.3);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
-}
+}*/
 
 .krajee-default .file-preview-text {
     display: block;
@@ -267,7 +271,7 @@
 
 .krajee-default .file-thumb-progress {
     height: 11px;
-    top: 30px;
+    top: 17px;
     left: 0;
     right: 0;
 }
@@ -375,13 +379,11 @@
 }
 
 .file-drop-zone {
-    border: 1px dashed #aaa;
     border-radius: 4px;
     height: 100%;
     text-align: center;
     vertical-align: middle;
-    margin: 12px 15px 12px 12px;
-    padding: 5px;
+    padding: 1px;
 }
 
 .file-drop-zone.clickable:hover {
@@ -397,16 +399,16 @@
 }
 
 .file-drop-zone-title {
-    color: #aaa;    
-    cursor: default;
-    font-size: 1.6em;
-    float: left;
+    margin: 3px;
     border: 1px solid rgba(0,0,0,0.2);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-    margin:8px;
-    width: 213px;
-    height: 250px;
-    padding: 97px 10px;
+    /* box-shadow: 0 0 10px 0 rgba(0,0,0,0.2); */
+    font-size: 1.6em;
+    color: #646c9a;
+    float: left;
+    text-align: center;
+    width: 184px;
+    height: 240px;
+    padding: 90px 10px;
 }
 .file-drop-zone-title .glyphicon-plus{
     font-size: 1.6em;
