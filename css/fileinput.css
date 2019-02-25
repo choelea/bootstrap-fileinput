@@ -51,14 +51,11 @@
 
 .krajee-default .file-drag-handle, .krajee-default .file-upload-indicator {
     float: left;
-    margin: 5px 0 -5px;
-    width: 16px;
-    height: 16px;
+    margin-top: 18px;
 }
 .krajee-default .file-drag-handle, .krajee-default .file-actions {
     float: right;
-    margin: 5px 0 -5px;
-    height: 16px;
+    margin-top: 18px;
 }
 .krajee-default .file-thumb-progress .progress, .krajee-default .file-thumb-progress .progress-bar {
     /* height: 16px; */
@@ -405,8 +402,8 @@
     float: left;
     text-align: center;
     width: 172px;
-    height: 234px;
-    padding: 86px 10px;
+    height: 237px;
+    padding: 96px 10px;
 }
 .file-drop-zone-title .glyphicon-plus{
     font-size: 1.6em;
@@ -531,4 +528,12 @@
 
 .file-preview-initial.sortable-chosen {
     background-color: #d9edf7;
+}
+
+/* customization started */
+.krajee-default .file-footer-caption {
+   margin-bottom: 2px;
+}
+.krajee-default .file-thumb-progress{
+    top:auto;
 }
