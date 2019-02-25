@@ -7,13 +7,14 @@
     <title>Krajee JQuery Plugins - &copy; Kartik</title>
 
     <link rel="stylesheet" href="css/bootstrap-3.3.7.css" crossorigin="anonymous">
-    <link href="http://plugins.krajee.com/assets/9b656c2b/css/fileinput.min.css?ver=201810231201" rel="stylesheet">
+    <link href="../css/fileinput-original.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
     <link href="../themes/explorer-fas/theme.css" media="all" rel="stylesheet" type="text/css"/>
     <script src="https://wcdn.okchem.com/resources/common/js/jquery.js" crossorigin="anonymous"></script>
     <script src="js/bootstrap-3.3.7.js" crossorigin="anonymous"></script>
     <script src="../js/plugins/sortable.js" type="text/javascript"></script>
-    <script src="../js/fileinput-original.js" type="text/javascript"></script>
+    <script src="http://plugins.krajee.com/assets/9b656c2b/js/fileinput.min.js?ver=201810231201"></script>
+    <!-- <script src="../js/fileinput-original.js" type="text/javascript"></script> -->
     <script src="../themes/fas/theme.js" type="text/javascript"></script>
     <script src="../themes/explorer-fas/theme.js" type="text/javascript"></script>
     <style>
@@ -42,26 +43,20 @@
 <script>
 
     $(document).ready(function () {
-        $imag = $("#multipleImages");
+        $imag = $("#multipleImages");        
         $imag.fileinput({
             uploadUrl: "http://localhost:3000/uploadone",
             initialPreview: [
-                '<img class="file-preview-image kv-preview-data" src="https://s3cdn.okchem.com/image/201810/f9830f5e-d124-4498-ac50-0740fdec0e52_large.jpg">',
-                '<img class="file-preview-image kv-preview-data" src="https://s3cdn.okchem.com/image/201810/8202b4a0-16a4-4044-bde2-5c5701579907_large.jpg">',
-                '<img class="file-preview-image kv-preview-data" src="https://s3cdn.okchem.com/image/201810/8202b4a0-16a4-4044-bde2-5c5701579907_large.jpg">',
-            ],            
-            "dropZoneClickTitle": "点击添加",
-            initialPreviewCount:3,
-            showCaption: false,
-            maxFileCount: 6,
-            showClose: false,
-            showBrowse: false,
-            showCaption: false,
-            showRemove: false,
-            showUpload: false,
-            validateInitialCount: true,
-            overwriteInitial:false,
-            browseOnZoneClick: true
+                "http://lorempixel.com/800/460/people/1",
+                "http://lorempixel.com/800/460/people/2"
+            ],
+            uploadAsync: false,
+            showUpload: false, // hide upload button
+            showRemove: false, // hide remove button
+            overwriteInitial: false, // append files to initial preview
+            minFileCount: 1,
+            maxFileCount: 5,
+            initialPreviewAsData: true,
         }).on("filebatchselected", function(event, files) {
             $imag.fileinput("upload");
         });
